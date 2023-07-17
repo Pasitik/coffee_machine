@@ -1,4 +1,5 @@
 from models.coffee_maker import Coffee
+import json
 
 class Latte(Coffee):
     def __init__(self):
@@ -13,6 +14,8 @@ class Latte(Coffee):
         Coffee.items["__milk"] -= 0.05
         Coffee.items["__coffee"] -= 1
         Coffee.items["__money"] += 5
+        with open("resources.json", "w") as f:
+            json.dump(Coffee.items, f)
         print(Coffee.items)
 
     
