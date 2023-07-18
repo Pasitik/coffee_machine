@@ -12,7 +12,7 @@ class Latte(Coffee):
         Coffee.items["__money"] += 5
         with open("resources.json", "w") as f:
             json.dump(Coffee.items, f, indent=4)
-        print(Coffee.items)
+        #print(Coffee.items)
 
     
 

@@ -10,9 +10,10 @@ class Cappuccino(Coffee):
         Coffee.items["__milk"] -= 7
         Coffee.items["__coffee"] -= 5
         Coffee.items["__money"] += 5
+        Coffee.items["valid_coins"] = [5, 150, 200]
         with open("resources.json", "w") as f:
             json.dump(Coffee.items, f, indent=4)
-        print(Coffee.items)
+        #print(Coffee.items)
 
     
 
